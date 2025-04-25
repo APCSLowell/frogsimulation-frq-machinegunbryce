@@ -20,21 +20,21 @@ public class FrogSimulation
 		while(hops < maxHops){
 			currentPosition += hopDistance();
 		
-		if(currentPosition < 0){
-		return false;
+			if(currentPosition < 0){
+				return false;
+			}
+			if(currentPosition >= goalDistance){
+				return true;
+			}
 		}
-		if(currentPosition >= goalDistance){
-			return true;
-		}
-		}
-
+				return false;
 	}
 	
 	public double runSimulations(int num)
 	{ 
 		int g = 0;
 		for(int i =0; i < num; i++){
-			if(simulate() ){
+			if(simulate()){
 				g++;
 			}
 		}
