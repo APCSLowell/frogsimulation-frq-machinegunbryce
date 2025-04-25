@@ -19,12 +19,13 @@ public class FrogSimulation
 		int currentPosition = 0;
 		while(hops < maxHops){
 			currentPosition += hopDistance();
-		}
+		
 		if(currentPosition < 0){
 		return false;
 		}
 		if(currentPosition >= goalDistance){
 			return true;
+		}
 		}
 
 	}
