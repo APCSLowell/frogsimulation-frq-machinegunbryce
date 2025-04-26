@@ -40,7 +40,7 @@ if(simulate() == true)
 g++;
 
 }
-return (double)good/num;
+return (double)g/num;
 	}
 	
 
