@@ -15,34 +15,35 @@ public class FrogSimulation
 	
 	public boolean simulate()
 	{ 
-		int hops =0;
-		int currentPosition = 0;
-		while(hops < maxHops){
-			currentPosition += hopDistance();
-		
-			if(currentPosition < 0){
-				return false;
+		int a = 0;
+
+		for(int i =0; i<maxHops; i++) {
+		a+= hopDistance();
+			if(a >= goalDistance) {
+			return true;
 			}
-			if(currentPosition >= goalDistance){
-				return true;
+			else if(a <0) {
+			return false;
 			}
 		}
-				return false;
-	}
+		return false;
+	
+		}
+	
 	
 	public double runSimulations(int num)
 	{ 
 		int g = 0;
-		for(int i =0; i < num; i++){
-			if(simulate()){
-				g++;
-			}
-		}
-		return (double)g/num;
 
+for(int i =0; i < num; i++) {
+if(simulate() == true)
+g++;
+
+}
+return (double)good/num;
 	}
 	
-	
+
 	//ignore the code below this line
 	//-------------------------------------------------------------------------------------
 	private int[] hopValues;
@@ -111,4 +112,5 @@ public class FrogSimulation
 	
 	
 	
-} 
+
+}
